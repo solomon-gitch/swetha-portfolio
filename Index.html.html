@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swetha S | Project Manager — Web Applications & Global Delivery</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#070D19',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            teal: {
+              500: '#0D9488',
+              600: '#0F766E',
+            },
+            amber: {
+              400: '#FBBF24',
+              500: '#F59E0B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-600 selection:text-white">
+
+  <!-- Toast Notification Container (Replaces alert) -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Brand / Logo -->
+        <a href="#top" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center font-display font-bold text-lg shadow-sm group-hover:bg-teal-600 transition-colors">
+            SS
+          </div>
+          <div>
+            <span class="font-display font-bold text-navy-900 text-lg tracking-tight block leading-none">Swetha S</span>
+            <span class="text-xs font-medium text-slate-500 tracking-wide">Project Manager</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#competencies" class="hover:text-teal-600 transition-colors">Competencies</a>
+          <a href="#experience" class="hover:text-teal-600 transition-colors">Experience</a>
+          <a href="#global-projects" class="hover:text-teal-600 transition-colors">Global Projects</a>
+          <a href="#academic" class="hover:text-teal-600 transition-colors">Academic & Tech</a>
+          <a href="#education" class="hover:text-teal-600 transition-colors">Credentials</a>
+        </nav>
+
+        <!-- Desktop CTA & Mobile Menu Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-teal-600 text-white text-sm font-semibold shadow-sm transition-all">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Get in Touch</span>
+          </a>
+          <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-1 shadow-lg">
+      <a href="#competencies" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-teal-600">Core Competencies</a>
+      <a href="#experience" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-teal-600">Work Experience</a>
+      <a href="#global-projects" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-teal-600">International Projects (8)</a>
+      <a href="#academic" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-teal-600">Academic Projects</a>
+      <a href="#education" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-teal-600">Education & Certifications</a>
+      <a href="#contact" class="mobile-nav-link block mt-3 text-center px-4 py-3 rounded-xl bg-navy-900 text-white font-semibold">Contact Swetha</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="relative overflow-hidden bg-navy-900 text-white pt-12 pb-20 sm:pt-20 sm:pb-28">
+    <!-- Subtle Geometric Accent Shapes -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-teal-500 blur-3xl"></div>
+      <div class="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-amber-500 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-amber-400 text-xs sm:text-sm font-medium">
+            <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+            <span>Open to Project Management & Delivery Opportunities</span>
+          </div>
+
+          <div>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Swetha S
+            </h1>
+            <p class="mt-2 font-display text-xl sm:text-2xl font-semibold text-teal-400">
+              Project Manager — Web Applications & International Client Delivery
+            </p>
+          </div>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Project Management professional with 1 year of experience coordinating web application projects from planning to delivery. Experienced in project planning, task allocation, team coordination, stakeholder communication, requirement gathering, progress tracking, and issue management. Strong technical background helps in effectively coordinating between business, development, and testing teams to ensure projects are delivered on time and according to requirements.
+          </p>
+
+          <!-- Location & Quick Contact Meta -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-slate-300 pt-1">
+            <span class="inline-flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+              Chennai, Tamil Nadu
+            </span>
+            <button onclick="copyText('+91-6369705084', 'Phone number copied!')" class="inline-flex items-center gap-2 hover:text-white transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-teal-400"></i>
+              <span>+91-6369705084</span>
+            </button>
+            <button onclick="copyText('swethasridharan.16@gmail.com', 'Email address copied!')" class="inline-flex items-center gap-2 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-teal-400"></i>
+              <span>swethasridharan.16@gmail.com</span>
+            </button>
+          </div>
+
+          <!-- Primary CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-3">
+            <a href="#global-projects" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-600 text-white font-semibold text-sm sm:text-base shadow-lg shadow-teal-950/40 transition-all">
+              <i data-lucide="globe" class="w-5 h-5"></i>
+              <span>View International Projects</span>
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm sm:text-base transition-all">
+              <span>Get in Touch</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <button onclick="copyText('swethasridharan.16@gmail.com', 'Email copied to clipboard!')" class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-navy-800 hover:bg-navy-700 border border-slate-700 text-slate-200 font-medium text-sm transition-all" title="Copy Email Address">
+              <i data-lucide="copy" class="w-4 h-4 text-amber-400"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Hero Executive KPI Summary Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-navy-800/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl">
+            <div class="flex items-center justify-between pb-5 border-b border-slate-700/80">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Executive Snapshot</p>
+                <h2 class="font-display text-lg font-bold text-white mt-0.5">Delivery & Leadership Metrics</h2>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 my-6">
+              <div class="p-4 rounded-xl bg-navy-900/90 border border-slate-700/70 flex items-center justify-between">
+                <div>
+                  <p class="text-2xl sm:text-3xl font-display font-extrabold text-amber-400">200+ Launches</p>
+                  <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Successful Web Project Deliveries</p>
+                </div>
+                <span class="p-2.5 rounded-lg bg-amber-500/15 text-amber-400">
+                  <i data-lucide="rocket" class="w-5 h-5"></i>
+                </span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-navy-900/90 border border-slate-700/70 flex items-center justify-between">
+                <div>
+                  <p class="text-2xl sm:text-3xl font-display font-extrabold text-teal-400">9.1 CGPA</p>
+                  <p class="text-xs sm:text-sm text-slate-400 mt-0.5">MSc Information Technology</p>
+                </div>
+                <span class="p-2.5 rounded-lg bg-teal-500/15 text-teal-400">
+                  <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <p class="text-xs text-slate-400 mb-2.5 font-medium">End-to-End SDLC Governance:</p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Requirement Scoping</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Sprint Planning</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">QA & UAT Sign-Off</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Client Stakeholders</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies & Technical Skills -->
+  <section id="competencies" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-teal-600">Capabilities & Fluency</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-navy-900 mt-1">Core Competencies & Technical Stack</h2>
+        <p class="text-slate-600 mt-2 max-w-2xl">
+          Bridging business objectives and engineering execution with structured delivery workflows and hands-on technical literacy.
+        </p>
+      </div>
+
+      <!-- Interactive Filter Tabs -->
+      <div class="inline-flex p-1.5 rounded-xl bg-slate-200/80 self-start md:self-auto" role="tablist">
+        <button onclick="switchSkillTab('all')" id="tab-all" class="skill-tab px-4 py-2 rounded-lg text-sm font-semibold bg-white text-navy-900 shadow-sm transition-all">
+          All Skills (17)
+        </button>
+        <button onclick="switchSkillTab('pm')" id="tab-pm" class="skill-tab px-4 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-navy-900 transition-all">
+          Project Management (10)
+        </button>
+        <button onclick="switchSkillTab('tech')" id="tab-tech" class="skill-tab px-4 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-navy-900 transition-all">
+          Technical Stack (7)
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Project Management Skills Card -->
+      <div id="panel-pm" class="lg:col-span-7 bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-8 shadow-sm transition-all">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-11 h-11 rounded-xl bg-navy-900 text-amber-400 flex items-center justify-center">
+            <i data-lucide="kanban" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold text-navy-900">Project Management & Delivery</h3>
+            <p class="text-xs text-slate-500">End-to-end lifecycle governance, coordination & stakeholder alignment</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="pm-skills-grid">
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Project Planning & Coordination</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Project Scheduling & Tracking</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Task Allocation & Team Coordination</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Stakeholder Management</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Requirement Gathering & Analysis</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Risk & Issue Tracking</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Project Status Reporting</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Timeline & Milestone Tracking</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Client Communication</span>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+            <span class="text-sm font-medium text-slate-800">Documentation & Reporting</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Skills Card -->
+      <div id="panel-tech" class="lg:col-span-5 bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-8 shadow-sm transition-all flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-11 h-11 rounded-xl bg-teal-600 text-white flex items-center justify-center">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-xl font-bold text-navy-900">Technical & Analytical Stack</h3>
+              <p class="text-xs text-slate-500">Enables accurate scoping, dev-QA alignment & data reporting</p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs">BI</span>
+                <div>
+                  <p class="text-sm font-semibold text-navy-900">Power BI & MS Excel</p>
+                  <p class="text-xs text-slate-500">Reporting, Dashboards & Project Tracking</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-50 text-amber-700 border border-amber-200/70">Analytics</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xs">DB</span>
+                <div>
+                  <p class="text-sm font-semibold text-navy-900">SQL / MySQL</p>
+                  <p class="text-xs text-slate-500">Relational Databases & Data Querying</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-teal-50 text-teal-700 border border-teal-200/70">Database</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-navy-900 text-white flex items-center justify-center font-bold text-xs">WEB</span>
+                <div>
+                  <p class="text-sm font-semibold text-navy-900">HTML & CSS, JavaScript</p>
+                  <p class="text-xs text-slate-500">Frontend Architecture & Responsive UI</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-200/70 text-slate-700">Frontend</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs">BE</span>
+                <div>
+                  <p class="text-sm font-semibold text-navy-900">PHP & Python</p>
+                  <p class="text-xs text-slate-500">Server-side Logic & Data Preprocessing</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200/70">Backend / ML</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2.5 text-xs text-slate-500">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-500 shrink-0"></i>
+          <span>Hands-on technical background accelerates issue triage and reduces requirement ambiguity.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience & Internships Timeline -->
+  <section id="experience" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-teal-600">Career Trajectory</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-navy-900 mt-1">Work Experience & Internships</h2>
+        <p class="text-slate-600 mt-2">
+          Progression from hands-on web development internships to leading international web application deliveries.
+        </p>
+      </div>
+
+      <!-- Vertical Timeline -->
+      <div class="relative border-l-2 border-slate-200 ml-3 sm:ml-6 space-y-10">
+
+        <!-- Role 1: Syntlang Private Limited -->
+        <div class="relative pl-8 sm:pl-10">
+          <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-teal-600 ring-4 ring-teal-50"></span>
+          <div class="bg-slate-50 rounded-2xl border border-slate-200/90 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex flex-wrap items-start justify-between gap-4 pb-4 border-b border-slate-200/80">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-600 text-white text-xs font-semibold mb-2">
+                  <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Full-Time Role
+                </span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-navy-900">Project Manager</h3>
+                <p class="text-base font-semibold text-teal-700">Syntlang Private Limited</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-navy-900">
+                  <i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-500"></i>
+                  Aug 2025 – Aug 2026
+                </span>
+                <p class="text-xs text-slate-500 mt-1.5 flex items-center sm:justify-end gap-1">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Chennai
+                </p>
+              </div>
+            </div>
+
+            <ul class="mt-5 space-y-3 text-sm sm:text-base text-slate-700">
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Managed web projects from requirement gathering and planning through development, testing, and successful deployment.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Handled international clients, managing requirements, communication, feedback, revisions, and approvals.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Coordinated with developers, testers, and designers to ensure timely project delivery.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Prepared project schedules, task allocations and tracked milestones, risks, and issues.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Conducted project meetings and daily stand-ups to monitor progress and resolve blockers.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Managed client escalations related to requirements, timelines, and technical issues by coordinating with relevant teams.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="arrow-right-circle" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+                <span>Successfully handled and launched multiple international client projects across different countries.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: ValleyPoint Technologies -->
+        <div class="relative pl-8 sm:pl-10">
+          <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-amber-500 ring-4 ring-amber-50"></span>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold mb-1.5">
+                  Internship
+                </span>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-navy-900">Web Development Intern</h3>
+                <p class="text-sm font-semibold text-slate-600">ValleyPoint Technologies</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Jun 2024 – Jul 2024
+                </span>
+                <p class="text-xs text-slate-500 mt-1">Chennai</p>
+              </div>
+            </div>
+            <p class="mt-3 text-sm sm:text-base text-slate-700">
+              Built responsive web pages using <strong>HTML, CSS, and JavaScript</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Role 3: Narpavi Enterprises -->
+        <div class="relative pl-8 sm:pl-10">
+          <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-navy-800 ring-4 ring-slate-100"></span>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold mb-1.5">
+                  Internship
+                </span>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-navy-900">Web Development Intern</h3>
+                <p class="text-sm font-semibold text-slate-600">Narpavi Enterprises</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Jul 2022 – Aug 2022
+                </span>
+                <p class="text-xs text-slate-500 mt-1">Chennai</p>
+              </div>
+            </div>
+            <p class="mt-3 text-sm sm:text-base text-slate-700">
+              Website development using <strong>HTML, PHP, MySQL</strong>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- International Client Projects Showcase -->
+  <section id="global-projects" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-teal-600">International Delivery</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-navy-900 mt-1">International Client Projects</h2>
+        <p class="text-slate-600 mt-2 max-w-2xl">
+          End-to-end project management across international client engagements. Click any card to inspect PM delivery scope, workflows, and live website links.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2" id="project-filters">
+        <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-navy-900 text-white shadow-sm transition-all">
+          All (8)
+        </button>
+        <button data-filter="Europe" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-teal-500 transition-all">
+          Europe (5)
+        </button>
+        <button data-filter="Asia-Pacific & India" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-teal-500 transition-all">
+          Asia-Pacific & India (3)
+        </button>
+        <button data-filter="Commerce & Booking" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-teal-500 transition-all">
+          Commerce & Booking (3)
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Cards injected by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Academic Projects Section -->
+  <section id="academic" class="py-16 sm:py-24 bg-navy-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Technical Foundation</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-1">Academic Projects</h2>
+        <p class="text-slate-300 mt-2">
+          Applied software engineering, machine learning, and data visualization projects built during computer science studies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Academic Project 1 -->
+        <div class="bg-navy-800/90 border border-slate-700/80 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-teal-500/60 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-700/80 text-slate-300">ML & BI Analytics</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">
+              Campus Placement Prediction Using Machine Learning
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Analyzed student academic data to predict placement outcomes.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Worked with data preprocessing and model development.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Created Power BI dashboards to present placement-related insights.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-700/80 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">Scikit-learn</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-amber-400 text-xs font-semibold border border-slate-700">Power BI</span>
+          </div>
+        </div>
+
+        <!-- Academic Project 2 -->
+        <div class="bg-navy-800/90 border border-slate-700/80 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-teal-500/60 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center">
+                <i data-lucide="file-check-2" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-700/80 text-slate-300">Web & Verification</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">
+              Online Birth Certificate Generation
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Developed a web-based platform for online birth certificate generation and verification.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Implemented form validation, authentication, database integration, and PDF generation.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-700/80 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">HTML</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">PHP</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-amber-400 text-xs font-semibold border border-slate-700">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Academic Project 3 -->
+        <div class="bg-navy-800/90 border border-slate-700/80 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-teal-500/60 transition-colors">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                <i data-lucide="utensils" class="w-6 h-6"></i>
+              </span>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-700/80 text-slate-300">Reservation System</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">
+              Golden Hour Cafe Reservation System
+            </h3>
+            <ul class="space-y-2.5 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Developed an online table reservation system for managing customer bookings.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0"></span>
+                <span>Implemented booking availability and customer confirmation workflows.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-700/80 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">HTML</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">CSS</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-teal-400 text-xs font-semibold border border-slate-700">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-amber-400 text-xs font-semibold border border-slate-700">MySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education, Certifications & Languages -->
+  <section id="education" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+      <!-- Education & Languages (5 cols) -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-teal-600">Academic Background</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-1 mb-6">Education</h2>
+
+          <div class="space-y-4">
+            <!-- MSc -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <span class="inline-block px-2.5 py-1 rounded-md bg-teal-50 text-teal-700 text-xs font-bold mb-2">
+                    2023 – 2025
+                  </span>
+                  <h3 class="font-display text-lg font-bold text-navy-900">MSc Information Technology</h3>
+                  <p class="text-sm text-slate-600 mt-0.5">Dwarka Doss GD Vaishnav College</p>
+                </div>
+                <div class="text-right shrink-0">
+                  <span class="inline-block px-3 py-1.5 rounded-xl bg-navy-900 text-amber-400 font-display font-bold text-sm">
+                    CGPA 9.1
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BSc -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <span class="inline-block px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-bold mb-2">
+                    2020 – 2023
+                  </span>
+                  <h3 class="font-display text-lg font-bold text-navy-900">BSc Computer Science</h3>
+                  <p class="text-sm text-slate-600 mt-0.5">MOP Vaishnav College for Women</p>
+                </div>
+                <div class="text-right shrink-0">
+                  <span class="inline-block px-3 py-1.5 rounded-xl bg-slate-100 text-navy-900 font-display font-bold text-sm">
+                    CGPA 8.1
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages Card -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <div class="flex items-center gap-2.5 mb-4">
+            <i data-lucide="languages" class="w-5 h-5 text-teal-600"></i>
+            <h3 class="font-display text-lg font-bold text-navy-900">Languages</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+              <p class="font-semibold text-navy-900 text-sm">English</p>
+              <p class="text-xs text-teal-600 font-medium mt-0.5">Fluent</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+              <p class="font-semibold text-navy-900 text-sm">Tamil</p>
+              <p class="text-xs text-teal-600 font-medium mt-0.5">Fluent</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications & Professional Commitment (7 cols) -->
+      <div class="lg:col-span-7">
+        <span class="text-xs font-bold uppercase tracking-widest text-teal-600">Continuous Learning</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-navy-900 mt-1 mb-6">Certifications & Conferences</h2>
+
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="badge-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">TCS ION Career Edge-Young Professional</h4>
+                <p class="text-xs text-slate-500 mt-1">TCS iON</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0">
+                <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Data Analytics using Power BI and Tableau</h4>
+                <p class="text-xs text-slate-500 mt-1">Syasan's Career Analytics Technology</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Problem Solving Using Computational Thinking</h4>
+                <p class="text-xs text-slate-500 mt-1">Coursera</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0">
+                <i data-lucide="blocks" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Blockchain Basics</h4>
+                <p class="text-xs text-slate-500 mt-1">Great Learning</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Ethical Hacking</h4>
+                <p class="text-xs text-slate-500 mt-1">Zero2Infynite</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">International Conference on Blockchain and Artificial Intelligence</h4>
+                <p class="text-xs text-slate-500 mt-1">Conference Participation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Commitment Callout -->
+          <div class="mt-6 p-5 rounded-xl bg-gradient-to-r from-navy-900 to-navy-800 text-white flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider text-amber-400">Professional Commitment</p>
+              <p class="text-sm text-slate-200 mt-1 leading-relaxed">
+                Committed to delivering projects successfully through effective planning, clear communication, strong team coordination, and a client-focused approach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 sm:py-24 bg-slate-100 border-t border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+
+          <!-- Left Contact Details -->
+          <div class="lg:col-span-6 bg-navy-900 text-white p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-teal-400">Let's Connect</span>
+              <h2 class="font-display text-3xl font-bold mt-2">Ready to Lead Your Next Web Project</h2>
+              <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                Looking for an organized, technically fluent Project Manager to drive client communications, sprint milestones, and on-time launches? Reach out directly.
+              </p>
+
+              <div class="mt-8 space-y-4">
+                <!-- Phone Card -->
+                <div class="p-4 rounded-2xl bg-navy-800/90 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs text-slate-400">Phone</p>
+                      <a href="tel:+916369705084" class="font-semibold text-white hover:text-teal-400 transition-colors">+91-6369705084</a>
+                    </div>
+                  </div>
+                  <button onclick="copyText('+91-6369705084', 'Phone number copied!')" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-teal-600 text-xs font-semibold text-white transition-colors flex items-center gap-1.5">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy
+                  </button>
+                </div>
+
+                <!-- Email Card -->
+                <div class="p-4 rounded-2xl bg-navy-800/90 border border-slate-700 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3.5 min-w-0">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                      <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <p class="text-xs text-slate-400">Email Address</p>
+                      <a href="mailto:swethasridharan.16@gmail.com" class="font-semibold text-white hover:text-amber-400 transition-colors block truncate">swethasridharan.16@gmail.com</a>
+                    </div>
+                  </div>
+                  <button onclick="copyText('swethasridharan.16@gmail.com', 'Email address copied!')" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-amber-500 hover:text-navy-950 text-xs font-semibold text-white transition-colors flex items-center gap-1.5 shrink-0">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy
+                  </button>
+                </div>
+
+                <!-- Location Card -->
+                <div class="p-4 rounded-2xl bg-navy-800/90 border border-slate-700 flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-slate-700 text-slate-200 flex items-center justify-center shrink-0">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400">Location</p>
+                    <p class="font-semibold text-white">Chennai, Tamil Nadu, India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-400">
+              Swetha S • Project Manager • Chennai, Tamil Nadu
+            </div>
+          </div>
+
+          <!-- Right Quick Inquiry Composer -->
+          <div class="lg:col-span-6 p-8 sm:p-10">
+            <h3 class="font-display text-xl font-bold text-navy-900">Send a Quick Message</h3>
+            <p class="text-sm text-slate-500 mt-1">Draft a note and open it directly in your email client.</p>
+
+            <form id="contact-form" class="mt-6 space-y-4">
+              <div>
+                <label for="sender-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Your Name / Organization</label>
+                <input type="text" id="sender-name" required placeholder="e.g., Karthik Nair — Talent Acquisition" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal-600 focus:ring-2 focus:ring-teal-500/20 outline-none text-sm transition-all" />
+              </div>
+
+              <div>
+                <label for="sender-subject" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Topic</label>
+                <select id="sender-subject" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal-600 focus:ring-2 focus:ring-teal-500/20 outline-none text-sm bg-white transition-all">
+                  <option value="Project Manager Opportunity">Project Manager Role Opportunity</option>
+                  <option value="Web Project Delivery Inquiry">Web Application Project Inquiry</option>
+                  <option value="Interview / Discussion Request">Schedule an Introductory Call</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="sender-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Message</label>
+                <textarea id="sender-message" rows="4" required placeholder="Hi Swetha, I reviewed your portfolio and would like to connect..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal-600 focus:ring-2 focus:ring-teal-500/20 outline-none text-sm transition-all"></textarea>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <button type="submit" class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-sm transition-all">
+                  <i data-lucide="mail-plus" class="w-4 h-4"></i>
+                  <span>Compose in Email App</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 text-slate-400 py-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-2.5">
+        <span class="w-7 h-7 rounded-lg bg-teal-600 text-white font-display font-bold text-xs flex items-center justify-center">SS</span>
+        <span class="text-slate-200 font-semibold">Swetha S</span>
+        <span>• Project Manager</span>
+      </div>
+      <p class="text-xs text-slate-500">Chennai, Tamil Nadu, India</p>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/75 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200">
+      <!-- Modal Header -->
+      <div class="bg-navy-900 text-white p-6 sm:p-7 flex items-start justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 mb-1.5">
+            <span id="modal-flag"></span>
+            <span id="modal-country"></span>
+            <span>•</span>
+            <span id="modal-category" class="text-teal-400"></span>
+          </div>
+          <h3 id="modal-title" class="font-display text-2xl font-bold text-white"></h3>
+        </div>
+        <button id="close-modal-btn" aria-label="Close modal" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-7 space-y-6">
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Project Scope & Delivery Summary</h4>
+          <p id="modal-description" class="text-slate-700 text-sm sm:text-base leading-relaxed"></p>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-3 flex items-center gap-1.5">
+            <i data-lucide="check-square" class="w-4 h-4"></i> Key Project Management Responsibilities
+          </h4>
+          <ul id="modal-responsibilities" class="space-y-2.5 text-sm text-slate-700">
+            <!-- Injected dynamically -->
+          </ul>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-100">
+          <div class="text-xs text-slate-500">
+            Role: <strong class="text-navy-900">Project Manager (Syntlang Private Limited)</strong>
+          </div>
+          <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold shadow-sm transition-all">
+            <span>Visit Live Website</span>
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script>
+    // International Client Projects Data (100% faithful to resume)
+    const internationalProjects = [
+      {
+        id: 'beauvais',
+        title: 'Beauvais Disney Transfer',
+        country: 'France',
+        flag: '🇫🇷',
+        region: 'Europe',
+        tags: ['Europe', 'Commerce & Booking'],
+        domainType: 'Taxi Booking — Paris Transfers',
+        url: 'https://beauvaisdisneytransfer.com',
+        displayUrl: 'beauvaisdisneytransfer.com',
+        description: 'Managed the development and successful launch of a taxi booking website for transfers across Paris based on client requirements and recommendations.',
+        pmHighlights: [
+          'Translated Paris transfer booking requirements and client recommendations into clear task plans.',
+          'Coordinated design revisions, booking flow testing, and stakeholder approvals.',
+          'Tracked milestones and verified production readiness prior to launch.'
+        ]
+      },
+      {
+        id: 'banyan',
+        title: 'Banyan Tree Money Academy',
+        country: 'Malaysia',
+        flag: '🇲🇾',
+        region: 'Asia-Pacific & India',
+        tags: ['Asia-Pacific & India'],
+        domainType: 'Educational & Financial Learning Academy',
+        url: 'https://banyantreemoneyacademy.com',
+        displayUrl: 'banyantreemoneyacademy.com',
+        description: 'Managed the development and launch of an academy website focused on educational and financial learning services.',
+        pmHighlights: [
+          'Gathered educational and financial learning program requirements from the client.',
+          'Coordinated developers, designers, and testers across schedules and content milestones.',
+          'Managed client feedback cycles and successful website launch.'
+        ]
+      },
+      {
+        id: 'indiatravel',
+        title: 'India Travel',
+        country: 'Switzerland',
+        flag: '🇨🇭',
+        region: 'Europe',
+        tags: ['Europe'],
+        domainType: 'Travel & Visual Experiences',
+        url: 'https://india-travel.ch',
+        displayUrl: 'india-travel.ch',
+        description: 'Managed the development and launch of a travel website showcasing destinations, travel experiences, and engaging visual content.',
+        pmHighlights: [
+          'Structured destination showcases, travel experience sections, and visual content workflows.',
+          'Managed communication, revisions, and approvals with the client.',
+          'Coordinated QA checks and timely launch execution.'
+        ]
+      },
+      {
+        id: 'nordic',
+        title: 'Nordic Affairs Media',
+        country: 'Sweden',
+        flag: '🇸🇪',
+        region: 'Europe',
+        tags: ['Europe'],
+        domainType: 'Photography Portfolio Website',
+        url: 'https://nordicaffairsmedia.com',
+        displayUrl: 'nordicaffairsmedia.com',
+        description: "Managed the development and launch of a photography portfolio website based on the client's creative requirements.",
+        pmHighlights: [
+          'Aligned photography portfolio layouts with creative client requirements.',
+          'Coordinated visual presentation refinements and testing across viewports.',
+          'Ensured smooth client sign-off and live deployment.'
+        ]
+      },
+      {
+        id: 'nira',
+        title: 'Nira Ananta',
+        country: 'Odisha, India',
+        flag: '🇮🇳',
+        region: 'Asia-Pacific & India',
+        tags: ['Asia-Pacific & India'],
+        domainType: 'Web Development & Deployment',
+        url: 'https://niraananta.com',
+        displayUrl: 'niraananta.com',
+        description: 'Managed website development, client requirements, revisions, testing, and successful deployment.',
+        pmHighlights: [
+          'Handled end-to-end delivery from requirement gathering to deployment.',
+          'Tracked client revisions, resolved issues with the team, and monitored testing.',
+          'Delivered on schedule with clear status updates.'
+        ]
+      },
+      {
+        id: 'yavish',
+        title: 'Yavish',
+        country: 'New Zealand',
+        flag: '🇳🇿',
+        region: 'Asia-Pacific & India',
+        tags: ['Asia-Pacific & India'],
+        domainType: 'Photography-Focused Website',
+        url: 'https://yavish.co.nz',
+        displayUrl: 'yavish.co.nz',
+        description: "Managed the development and launch of a photography-focused website based on the client's requirements.",
+        pmHighlights: [
+          'Managed client requirements, feedback, and revisions from planning to launch.',
+          'Allocated tasks and coordinated design and development deliverables.',
+          'Verified quality and completed successful deployment.'
+        ]
+      },
+      {
+        id: 'goldenasset',
+        title: 'My Golden Asset',
+        country: 'Malta',
+        flag: '🇲🇹',
+        region: 'Europe',
+        tags: ['Europe', 'Commerce & Booking'],
+        domainType: 'E-Commerce & Payment Gateway',
+        url: 'https://mygoldenasset.com',
+        displayUrl: 'mygoldenasset.com',
+        description: 'Managed the development and successful launch of an e-commerce website with product management and payment gateway integration.',
+        pmHighlights: [
+          'Coordinated product management workflows and payment gateway integration.',
+          'Tracked risks, testing milestones, and client approvals.',
+          'Delivered a complete e-commerce launch aligned with requirements.'
+        ]
+      },
+      {
+        id: 'mudeys',
+        title: 'Mudeys',
+        country: 'UK',
+        flag: '🇬🇧',
+        region: 'Europe',
+        tags: ['Europe', 'Commerce & Booking'],
+        domainType: 'Online Food Ordering Website',
+        url: 'https://mudeys.com',
+        displayUrl: 'mudeys.com',
+        description: 'Managed the development and successful launch of an online food ordering website.',
+        pmHighlights: [
+          'Coordinated online food ordering features, team tasks, and QA testing.',
+          'Conducted stand-ups and progress tracking to resolve blockers early.',
+          'Launched smoothly according to schedule and client expectations.'
+        ]
+      }
+    ];
+
+    // Render International Projects Grid
+    function renderProjects(filter = 'all') {
+      const grid = document.getElementById('projects-grid');
+      if (!grid) return;
+
+      const filtered = filter === 'all'
+        ? internationalProjects
+        : internationalProjects.filter(p => p.tags.includes(filter));
+
+      grid.innerHTML = filtered.map(project => `
+        <article onclick="openProjectModal('${project.id}')" class="group cursor-pointer bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm hover:shadow-xl hover:border-teal-500/60 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-navy-900 text-xs font-semibold">
+                <span>${project.flag}</span>
+                <span>${project.country}</span>
+              </span>
+              <span class="text-xs font-medium text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">
+                ${project.region}
+              </span>
+            </div>
+
+            <h3 class="font-display text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">
+              ${project.title}
+            </h3>
+            <p class="text-xs font-semibold text-amber-600 mt-1">${project.domainType}</p>
+
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              ${project.description}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+            <a href="${project.url}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-teal-600 transition-colors truncate">
+              <i data-lucide="link" class="w-3.5 h-3.5 shrink-0"></i>
+              <span class="truncate">${project.displayUrl}</span>
+            </a>
+
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-navy-900 group-hover:text-teal-600 shrink-0">
+              <span>PM Details</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+        </article>
+      `).join('');
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    // Filter Button Handlers
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-navy-900', 'text-white', 'shadow-sm');
+          b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        });
+        btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        btn.classList.add('bg-navy-900', 'text-white', 'shadow-sm');
+        renderProjects(btn.getAttribute('data-filter'));
+      });
+    });
+
+    // Modal Logic
+    const modal = document.getElementById('project-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    function openProjectModal(projectId) {
+      const project = internationalProjects.find(p => p.id === projectId);
+      if (!project) return;
+
+      document.getElementById('modal-flag').textContent = project.flag;
+      document.getElementById('modal-country').textContent = project.country;
+      document.getElementById('modal-category').textContent = project.domainType;
+      document.getElementById('modal-title').textContent = project.title;
+      document.getElementById('modal-description').textContent = project.description;
+      document.getElementById('modal-live-link').href = project.url;
+
+      const list = document.getElementById('modal-responsibilities');
+      list.innerHTML = project.pmHighlights.map(item => `
+        <li class="flex items-start gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+          <span>${item}</span>
+        </li>
+      `).join('');
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeProjectModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    closeModalBtn.addEventListener('click', closeProjectModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeProjectModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeProjectModal();
+      }
+    });
+
+    // Competency Tabs Switching
+    function switchSkillTab(tab) {
+      const panelPm = document.getElementById('panel-pm');
+      const panelTech = document.getElementById('panel-tech');
+      const tabs = ['all', 'pm', 'tech'];
+
+      tabs.forEach(t => {
+        const el = document.getElementById(`tab-${t}`);
+        if (t === tab) {
+          el.classList.add('bg-white', 'text-navy-900', 'shadow-sm');
+          el.classList.remove('text-slate-600');
+        } else {
+          el.classList.remove('bg-white', 'text-navy-900', 'shadow-sm');
+          el.classList.add('text-slate-600');
+        }
+      });
+
+      if (tab === 'all') {
+        panelPm.classList.remove('hidden', 'lg:col-span-12');
+        panelPm.classList.add('lg:col-span-7');
+        panelTech.classList.remove('hidden', 'lg:col-span-12');
+        panelTech.classList.add('lg:col-span-5');
+      } else if (tab === 'pm') {
+        panelPm.classList.remove('hidden', 'lg:col-span-7');
+        panelPm.classList.add('lg:col-span-12');
+        panelTech.classList.add('hidden');
+      } else if (tab === 'tech') {
+        panelTech.classList.remove('hidden', 'lg:col-span-5');
+        panelTech.classList.add('lg:col-span-12');
+        panelPm.classList.add('hidden');
+      }
+    }
+
+    // Clipboard Copy Helper (Uses execCommand fallback for iframe safety)
+    function copyText(text, message) {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast(message || 'Copied to clipboard!');
+      } catch (err) {
+        showToast('Could not copy automatically.');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Custom Toast Notification (No alert() used)
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl bg-navy-900 text-white text-sm font-medium shadow-xl border border-slate-700 transition-all';
+      toast.innerHTML = `
+        <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(8px)';
+        setTimeout(() => toast.remove(), 250);
+      }, 2800);
+    }
+
+    // Contact Form Mailto Composer
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('sender-name').value.trim();
+      const topic = document.getElementById('sender-subject').value;
+      const bodyText = document.getElementById('sender-message').value.trim();
+
+      const subject = encodeURIComponent(`${topic} — From ${name}`);
+      const body = encodeURIComponent(`Hi Swetha,\n\n${bodyText}\n\nBest regards,\n${name}`);
+      window.location.href = `mailto:swethasridharan.16@gmail.com?subject=${subject}&body=${body}`;
+      showToast('Opening your default email client...');
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Initialize on Window Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProjects('all');
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
